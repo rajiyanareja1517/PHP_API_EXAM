@@ -13,18 +13,18 @@
 
         parse_str($input,$_UPDATE);
 
-        $id=$_UPDATE['id'];
-        $name=$_UPDATE['name'];
-        $age=$_UPDATE['age'];
-        $course=$_UPDATE['course'];
+        $HallD=$_UPDATE['HallD'];
+        $HallNumber=$_UPDATE['HallNumber'];
+        $SeatsAmount=$_UPDATE['SeatsAmount'];
+      
 
-        $res = $config->updateStudent($name,$age,$course,$id);
+        $res = $config->update_Hall($HallD, $HallNumber, $SeatsAmount);
 
         if($res==1){
-            $arr['data']="Student updated Successfully...";
+            $arr['data']="Updated Successfully...";
         }
         else{
-            $arr['data']="Student updation failed...";
+            $arr['data']="Updation failed...";
         }
     }
     else{

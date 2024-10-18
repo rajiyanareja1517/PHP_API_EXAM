@@ -9,10 +9,10 @@
         $config = new Config();
 
 
-        if(!empty($_GET['id'])) {
+        if(!empty($_GET['HallD'])) {
             
-            $id = $_GET['id'];
-            $res = $config->fetchSingleRecord($id);
+            $id = $_GET['HallD'];
+            $res = $config->fetch_single_Hall($id);
             $arr = mysqli_fetch_assoc($res);
 
         } else {

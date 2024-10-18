@@ -8,7 +8,7 @@
     if($_SERVER['REQUEST_METHOD']=='GET'){
 
         $config =  new Config();
-        $res = $config->fetchAllStudents();
+        $res = $config->fetch_all_record_Hall();
         $all_records=[];
 
         while($record=mysqli_fetch_assoc($res)){

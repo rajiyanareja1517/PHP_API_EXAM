@@ -7,19 +7,18 @@
 
     if($_SERVER['REQUEST_METHOD']=='POST'){
 
-        $name = $_POST['name'];
-        $age = $_POST['age'];
-        $course = $_POST['course'];
-
+        $HallNumber=$_UPDATE['HallNumber'];
+        $SeatsAmount=$_UPDATE['SeatsAmount'];
+        
         $config =  new Config();
-        $res = $config->addStudent($name,$age,$course);
+        $res = $config->insertHall( $HallNumber, $SeatsAmount);
 
         if($res){
-            $arr['data'] = "Student Inserted Successfully...";
+            $arr['data'] = " Inserted Successfully...";
             http_response_code(201);
         }
         else{
-            $arr['data'] = "Student insertion failed...";
+            $arr['data'] = " Insertion failed...";
         }
     }
     else{

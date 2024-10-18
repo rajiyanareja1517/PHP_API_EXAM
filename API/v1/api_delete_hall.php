@@ -13,15 +13,15 @@
 
         parse_str($input,$_DELETE);
 
-        $id=$_DELETE['id'];
+        $id=$_DELETE['HallD'];
 
-        $res = $config->deleteStudent($id);
+        $res = $config->delete_record_Hall($id);
 
         if($res==1){
-            $arr['data']="Student deleted Successfully...";
+            $arr['data']=" Deleted Successfully...";
         }
         else{
-            $arr['data']="Student deletion failed...";
+            $arr['data']=" Deletion failed...";
         }
     }
     else{
